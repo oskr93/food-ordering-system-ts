@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch src --exec ts-node src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -11,9 +13,17 @@
   "description": "",
   "devDependencies": {
     "@types/express": "^5.0.2",
+    "@types/uuid": "^10.0.0",
     "express": "^5.1.0",
     "nodemon": "^3.1.10",
+    "prisma": "^6.8.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.8.2",
+    "kafkajs": "^2.2.4",
+    "uuid": "^11.1.0",
+    "zod": "^3.25.42"
   }
 }
